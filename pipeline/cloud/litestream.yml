@@ -1,0 +1,18 @@
+# Litestream: stream every change in the tracker to the private Cloudflare R2 bucket (ARCHITECTURE.md, Storage & knowledge).
+# Needs: CF_ACCOUNT_ID, LITESTREAM_ACCESS_KEY_ID, LITESTREAM_SECRET_ACCESS_KEY in the environment (cloud/start_replication.sh
+# reads them from the Mac keychain; Katie stores them there herself). Bucket name: appreciation-index-master.
+dbs:
+  - path: /Users/katiegraves/Desktop/Fashion Data Lab/db/luxury_bags.db
+    replica:
+      type: s3
+      bucket: appreciation-index-master
+      path: db/luxury_bags
+      endpoint: ${CF_ACCOUNT_ID}.r2.cloudflarestorage.com
+      region: auto
+  - path: /Users/katiegraves/Desktop/Fashion Data Lab/db/trends.db
+    replica:
+      type: s3
+      bucket: appreciation-index-master
+      path: db/trends
+      endpoint: ${CF_ACCOUNT_ID}.r2.cloudflarestorage.com
+      region: auto

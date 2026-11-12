@@ -1,0 +1,33 @@
+# Code and docs only. The data this pipeline collects stays on Katie's Mac (Dropbox backups), never in git:
+# the tracker database, raw pulls, photos, receipts, findings, exports, logs and backups.
+/*
+!/.gitignore
+!/README.md
+!/ARCHITECTURE.md
+!/BUZZ_PROTOCOL.md
+!/FASHION_WEEK_PROTOCOL.md
+!/SCAN_MAP.md
+!/scripts/
+!/scrapers/
+!/sql/
+!/cloud/
+!/site/
+*.db
+*.db-*
+*.sqlite
+*.jsonl
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.heic
+*.pdf
+*.docx
+.env
+.env.*
+__pycache__/
+.DS_Store
+
+# other projects that share this folder
+/sql/*founder*
+/sql/copenhagen-*

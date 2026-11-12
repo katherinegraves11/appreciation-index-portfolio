@@ -1,0 +1,9 @@
+node_modules
+.next
+.data
+.taste-skill
+data/*.db
+.git
+.env
+.env.local
+*.log
